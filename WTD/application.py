@@ -29,3 +29,5 @@ def complete_task():
 
 if __name__ == '__main__':
     app.run(debug=True)
+
+# 위 코드에서는 Flask를 이용하여 '/' 경로에 대한 GET 요청을 처리하고, tasks 리스트를 함께 전달하여 index.html 파일을 렌더링한다. '/add_task' 경로에 대한 POST 요청을 처리하여 클라이언트로부터 전달된 할 일 내용을 tasks 리스트에 추가한다. '/complete_task' 경로에 대한 POST 요청을 처리하여 클라이언트로부터 전달된 할 일 인덱스를 찾아서 해당 할 일의 completed 값을 True로 변경한다.
