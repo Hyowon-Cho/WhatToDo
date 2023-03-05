@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo List</title>
+</head>
+<body>
+    <h1>ToDo List</h1>
+    <ul id="tasks">
+        {% for task in tasks %}
+        <li {% if task.completed %}class="completed"{% endif %}>
+            <input type="checkbox" {% if task.completed %}checked{% endif %} onchange="completeTask({{ loop.index - 1 }})">
+            {{ task.content }}
+        </li>
+        {% endfor %}
+    </ul>
+    <form onsubmit
